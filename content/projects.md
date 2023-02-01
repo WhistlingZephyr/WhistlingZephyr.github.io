@@ -7,6 +7,9 @@ date: 2023-02-01T17:48:49+05:30
 .content {
     text-align: center;
 }
+.content ul {
+    text-align: left;
+}
 .content img {
     display: inline;
 }
