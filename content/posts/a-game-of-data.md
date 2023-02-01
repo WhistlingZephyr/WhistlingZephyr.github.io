@@ -14,14 +14,14 @@ starting and ending with the same letter, where the letter can't be "a", using
 
 ## Background
 
-So one day {{<small "(2022-Dec-14 to be specific)">}} I was hanging out on Discord in the [Rust Programming Language Community Server](https://discord.gg/rust-lang-community), and [Dylan](https://github.com/Dylan-DPC) there gave me a fun challenge to solve: He said that he was trying to name all important places {{<small "(such as countries, states, and major cities)">}} that start and end with the same letter that isn't "A" {{<small "(because there are quite bunch that start and end with \"A\")">}}. Well, I raised the concern that differentiating between major and non-major cities is likely going to be difficult, so I ended up ended up considering only capital cities in its place. I determined that I needed a way to get a list of all the world's countries, states, and capital cities first; and right off the bat, Wikidata seemed like the best place to start. That day, I learnt a bit of SPARQL and jotted down a basic [query](https://w.wiki/678J) to find the solution. Although, that solution wasn't perfect; so let's try coming up with something better this time.
+So one day <small>(2022-Dec-14 to be specific)</small> I was hanging out on Discord in the [Rust Programming Language Community Server](https://discord.gg/rust-lang-community), and [Dylan](https://github.com/Dylan-DPC) there gave me a fun challenge to solve: He said that he was trying to name all important places <small>(such as countries, states, and major cities)</small> that start and end with the same letter that isn't "A" <small>(because there are quite bunch that start and end with "A")</small>. Well, I raised the concern that differentiating between major and non-major cities is likely going to be difficult, so I ended up ended up considering only capital cities in its place. I determined that I needed a way to get a list of all the world's countries, states, and capital cities first; and right off the bat, Wikidata seemed like the best place to start. That day, I learnt a bit of SPARQL and jotted down a basic [query](https://w.wiki/678J) to find the solution. Although, that solution wasn't perfect; so let's try coming up with something better this time.
 
 > Note: I'm aware there are alternative ways to approach this problem; however, I'll be using Wikidata's Query Service with SPARQL to solve this rather than approaching it in a different way, for example using the graphical query builder to get a list of places and then filtering through in with a different language.
 
 ## Before we start
 
 - **Wikidata** is a knowledge database. It contains millions of statements, such as “the capital of Canada is Ottawa”, or “the Mona Lisa is painted in oil paint on poplar wood”, or “gold has a melting point of 1,064.18 degrees Celsius”.
-- **SPARQL** is a language to formulate questions {{<small "(queries)">}} for knowledge databases. With the right database, a SPARQL query could answer questions like “what is the most popular tonality in music?” or “which character was portrayed by the most actors?” or “what’s the distribution of blood types?” or “which authors’ works entered the public domain this year?”. The acronym "SPARQL" stands for "SPARQL Protocol And RDF Query Language".
+- **SPARQL** is a language to formulate questions <small>(queries)</small> for knowledge databases. With the right database, a SPARQL query could answer questions like “what is the most popular tonality in music?” or “which character was portrayed by the most actors?” or “what’s the distribution of blood types?” or “which authors’ works entered the public domain this year?”. The acronym "SPARQL" stands for "SPARQL Protocol And RDF Query Language".
 - **RDF** stands for "Resource Description Framework", it's used as a general method for describing and exchanging graph data, and it's what SPARQL queries.
 - **WDQS**, the Wikidata Query Service, brings the two together: You enter a SPARQL query, it runs it against Wikidata’s dataset and shows you the result.
 
@@ -204,7 +204,7 @@ SELECT DISTINCT ?label ?type WHERE {
 }
 ```
 
-And that's it! Our [result](https://w.wiki/6HLM) finally includes what seems to be all the matches. As of 2023-Jan-31 though, the result includes a place named just "Free City of" ([Q97940833](https://www.wikidata.org/wiki/Q97940833)); it appears to be an error in Wikidata's data on that page, hopefully it'll get addressed soon.
+And that's it! Our [result](https://w.wiki/6HLM) finally includes what seems to be all the matches. As of 2023-Jan-31 though, the result includes a place named just "Free City of" <small>([Q97940833](https://www.wikidata.org/wiki/Q97940833)</small>); it appears to be an error in Wikidata's data on that page, hopefully it'll get addressed soon.
 
 ## Outcome
 
@@ -218,9 +218,9 @@ So that was it, we've completed our task. It's only the tip of the iceberg thoug
 
 The query can still be improved in some ways, for example:
 
-- Using short names instead of full titles {{<small "(e.g. Electorate of Cologne -> Cologne)">}} {{<small "(Note: this would be rather complex due to WikiData not providing a field for shorter names)">}}.
-- Including names in other languages {{<small "(e.g. Deutschland)">}}.
-- Removing places that existed in the past and no longer fit the criteria now or are renamed {{<small "(e.g. Hohenzollern-Haigerloch)">}}.
+- Using short names instead of full titles <small>(e.g. Electorate of Cologne -> Cologne)</small> <small>(Note: this would be rather complex due to WikiData not providing a field for shorter names)</small>.
+- Including names in other languages <small>(e.g. Deutschland)</small>.
+- Removing places that existed in the past and no longer fit the criteria now or are renamed <small>(e.g. Hohenzollern-Haigerloch)</small>.
 
 And if you want to learn more about SPARQL, you can use the following resources:
 
