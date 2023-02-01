@@ -60,7 +60,7 @@ toc = true
   toc = true
 
   # Add custom css
-  # customCSS = ["css/foo.css", "css/bar.css"]
+  customCSS = ["css/style.css"]
 
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
@@ -75,9 +75,19 @@ toc = true
     weight = 10
 
   [[menu.main]]
+    name = "Projects"
+    url = "projects/"
+    weight = 20
+
+  [[menu.main]]
     name = "About"
     url = "about/"
-    weight = 20
+    weight = 30
+
+[module]
+  [[module.imports]]
+    path = 'github.com/hugo-mods/icons'
+
 
 [privacy]
   [privacy.disqus]
