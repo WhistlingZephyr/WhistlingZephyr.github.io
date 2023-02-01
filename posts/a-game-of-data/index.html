@@ -14,7 +14,7 @@ Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord 
 <meta property="og:description" content="Introduction In this post, we&rsquo;ll find a way to list all countries, states, and capital cities starting and ending with the same letter, where the letter can&rsquo;t be &ldquo;a&rdquo;, using Wikidata and SPARQL.
 Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord in the Rust Programming Language Community Server, and Dylan there gave me a fun challenge to solve: He said that he was trying to name all important places (such as countries, states, and major cities) that start and end with the same letter that isn&rsquo;t &ldquo;A&rdquo; (because there are quite bunch that start and end with &#34;A&#34;).">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://WhistlingZephyr.github.io/posts/a-game-of-data/"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://WhistlingZephyr.github.io/posts/a-game-of-data/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2023-02-01T12:39:18+05:30">
 <meta property="article:modified_time" content="2023-02-01T12:39:18+05:30">
 <meta name=twitter:card content="summary">
@@ -28,18 +28,18 @@ Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord 
 <link rel=mask-icon href=/safari-pinned-tab.svg color>
 <link rel="shortcut icon" href=/favicon.ico>
 <title>Into the Rabbit Hole: A Game of Data</title>
-<link rel=stylesheet href=http://WhistlingZephyr.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin=anonymous>
+<link rel=stylesheet href=https://WhistlingZephyr.github.io/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin=anonymous>
 </head>
 <body id=page>
 <header id=site-header class="animated slideInUp">
 <div class="hdr-wrapper section-inner">
 <div class=hdr-left>
 <div class=site-branding>
-<a href=http://WhistlingZephyr.github.io>WhistlingZephyr's Hub</a>
+<a href=https://WhistlingZephyr.github.io>WhistlingZephyr's Hub</a>
 </div>
 <nav class="site-nav hide-in-mobile">
-<a href=http://WhistlingZephyr.github.io/posts/>Posts</a>
-<a href=http://WhistlingZephyr.github.io/about/>About</a>
+<a href=https://WhistlingZephyr.github.io/posts/>Posts</a>
+<a href=https://WhistlingZephyr.github.io/about/>About</a>
 </nav>
 </div>
 <div class="hdr-right hdr-icons">
@@ -49,8 +49,8 @@ Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord 
 </header>
 <div id=mobile-menu class="animated fast">
 <ul>
-<li><a href=http://WhistlingZephyr.github.io/posts/>Posts</a></li>
-<li><a href=http://WhistlingZephyr.github.io/about/>About</a></li>
+<li><a href=https://WhistlingZephyr.github.io/posts/>Posts</a></li>
+<li><a href=https://WhistlingZephyr.github.io/about/>About</a></li>
 </ul>
 </div>
 <main class="site-main section-inner animated fadeIn faster">
@@ -231,7 +231,7 @@ starting and ending with the same letter, where the letter can&rsquo;t be &ldquo
 <footer class=post-info>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 00-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>WhistlingZephyr</p>
 <p>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=http://WhistlingZephyr.github.io/tags/programming>programming</a></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://WhistlingZephyr.github.io/tags/programming>programming</a></span>
 </p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>1859 Words</p>
 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2023-02-01 07:09 +0000</p>
@@ -258,11 +258,11 @@ starting and ending with the same letter, where the letter can&rsquo;t be &ldquo
 </div>
 </main>
 <footer id=site-footer class="section-inner thin animated fadeIn faster">
-<p>&copy; 2023 <a href=http://WhistlingZephyr.github.io>WhistlingZephyr</a> &#183; <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank rel=noopener>CC BY-NC 4.0</a></p>
+<p>&copy; 2023 <a href=https://WhistlingZephyr.github.io>WhistlingZephyr</a> &#183; <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank rel=noopener>CC BY-NC 4.0</a></p>
 <p>
-Made with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> &#183; Theme <a href=https://github.com/Track3/hermit target=_blank rel=noopener>Hermit</a> &#183; <a href=http://WhistlingZephyr.github.io/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a>
+Made with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> &#183; Theme <a href=https://github.com/Track3/hermit target=_blank rel=noopener>Hermit</a> &#183; <a href=https://WhistlingZephyr.github.io/posts/index.xml target=_blank title=rss><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a>
 </p>
 </footer>
-<script src=http://WhistlingZephyr.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin=anonymous></script>
+<script src=https://WhistlingZephyr.github.io/js/bundle.min.7d8545daa55d62427355498dd8da13f98ff79a7938ce7d2a5e2ae1ec0de3beb8.js integrity="sha256-fYVF2qVdYkJzVUmN2NoT+Y/3mnk4zn0qXirh7A3jvrg=" crossorigin=anonymous></script>
 </body>
 </html>
