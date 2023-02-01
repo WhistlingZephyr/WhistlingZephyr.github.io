@@ -1,5 +1,5 @@
 +++
-title = "About WhistlingZephyr"
+title = "About"
 date = 2023-02-01T12:39:18+05:30
 +++
 
