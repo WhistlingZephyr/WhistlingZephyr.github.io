@@ -204,7 +204,7 @@ SELECT DISTINCT ?label ?type WHERE {
 }
 ```
 
-And that's it! Our [result](https://w.wiki/6HLM) finally includes what seems to be all the matches. As of 2023-Jan-31 though, the result includes a place named just "Free City of" {{<small "([Q97940833](https://www.wikidata.org/wiki/Q97940833)">}}); it appears to be an error in Wikidata's data on that page, hopefully it'll get addressed soon.
+And that's it! Our [result](https://w.wiki/6HLM) finally includes what seems to be all the matches. As of 2023-Jan-31 though, the result includes a place named just "Free City of" ([Q97940833](https://www.wikidata.org/wiki/Q97940833); it appears to be an error in Wikidata's data on that page, hopefully it'll get addressed soon.
 
 ## Outcome
 
