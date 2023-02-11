@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 date: 2023-02-01T17:48:49+05:30
+description: "List of my projects"
 ---
 
 <style type="text/css">

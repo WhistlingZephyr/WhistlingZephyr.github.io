@@ -4,6 +4,10 @@ date: 2023-02-01T12:39:18+05:30
 title: "Into the Rabbit Hole: A Game of Data"
 tags:
   - programming
+description: >
+    finding a way to list all countries, states, and capital cities
+    starting and ending with the same letter, where the letter can't be "a",
+    using WikiData and SPARQL.
 ---
 
 ## Introduction
