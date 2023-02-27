@@ -22,14 +22,14 @@ So one day <small>(2022-Dec-14 to be specific)</small> I was hanging out on Disc
 
 > Note: I'm aware there are alternative ways to approach this problem; however, I'll be using Wikidata's Query Service with SPARQL to solve this rather than approaching it in a different way, for example using the graphical query builder to get a list of places and then filtering through in with a different language.
 
-## Before we start
+## Before We Start
 
 - **Wikidata** is a knowledge database. It contains millions of statements, such as “the capital of Canada is Ottawa”, or “the Mona Lisa is painted in oil paint on poplar wood”, or “gold has a melting point of 1,064.18 degrees Celsius”.
 - **SPARQL** is a language to formulate questions <small>(queries)</small> for knowledge databases. With the right database, a SPARQL query could answer questions like “what is the most popular tonality in music?” or “which character was portrayed by the most actors?” or “what’s the distribution of blood types?” or “which authors’ works entered the public domain this year?”. The acronym "SPARQL" stands for "SPARQL Protocol And RDF Query Language".
 - **RDF** stands for "Resource Description Framework", it's used as a general method for describing and exchanging graph data, and it's what SPARQL queries.
 - **WDQS**, the Wikidata Query Service, brings the two together: You enter a SPARQL query, it runs it against Wikidata’s dataset and shows you the result.
 
-## Digging up
+## Digging Up
 
 We can query Wikidata with SPARQL at <https://query.wikidata.org/>. A simple SPARQL query looks like this:
 
@@ -214,11 +214,11 @@ And that's it! Our [result](https://w.wiki/6HLM) finally includes what seems to 
 
 <table><thead><tr><th>label</th><th>type</th></tr></thead><tbody><tr><td>St. George's</td><td>capital</td></tr><tr><td>Warsaw</td><td>capital</td></tr><tr><td>Oslo</td><td>capital</td></tr><tr><td>Tashkent</td><td>capital</td></tr><tr><td>Kralendijk</td><td>capital</td></tr><tr><td>Kirkuk</td><td>capital</td></tr><tr><td>Central African Republic</td><td>country</td></tr><tr><td>Sardis</td><td>capital</td></tr><tr><td>Czech Republic</td><td>country</td></tr><tr><td>Qashliq</td><td>capital</td></tr><tr><td>St. John's</td><td>capital</td></tr><tr><td>Seychelles</td><td>country</td></tr><tr><td>Kingdom of Denmark</td><td>country</td></tr><tr><td>Solomon Islands</td><td>country</td></tr><tr><td>Saint Vincent and the Grenadines</td><td>country</td></tr><tr><td>Saint Kitts and Nevis</td><td>country</td></tr><tr><td>Nordhausen</td><td>state</td></tr><tr><td>State of Damascus</td><td>state</td></tr><tr><td>Electoral Palatinate</td><td>state</td></tr><tr><td>Free City of</td><td>state</td></tr><tr><td>Yaracuy</td><td>state</td></tr><tr><td>Himachal Pradesh</td><td>state</td></tr><tr><td>Nuevo León</td><td>state</td></tr><tr><td>Ekiti State</td><td>state</td></tr><tr><td>Ebonyi State</td><td>state</td></tr><tr><td>Chinese Soviet Republic</td><td>state</td></tr><tr><td>Edo State</td><td>state</td></tr><tr><td>Enugu State</td><td>state</td></tr><tr><td>East Central State</td><td>state</td></tr><tr><td>Eastern Lakes State</td><td>state</td></tr><tr><td>Eastern Nile State</td><td>state</td></tr><tr><td>Landgraviate of Hesse-Kassel</td><td>state</td></tr><tr><td>Mizoram</td><td>state</td></tr><tr><td>Ohio</td><td>state</td></tr><tr><td>Ontario</td><td>state</td></tr><tr><td>Negeri Sembilan</td><td>state</td></tr><tr><td>Hohenzollern-Haigerloch</td><td>state</td></tr><tr><td>Grand Duchy of Würzburg</td><td>state</td></tr><tr><td>Spanish Netherlands</td><td>state</td></tr><tr><td>Nassau-Siegen</td><td>state</td></tr><tr><td>Saxe-Weissenfels</td><td>state</td></tr><tr><td>North Kordofan</td><td>state</td></tr><tr><td>Chechen Republic</td><td>state</td></tr><tr><td>Electorate of Cologne</td><td>state</td></tr><tr><td>Nidwalden</td><td>state</td></tr><tr><td>Electorate of Hesse</td><td>state</td></tr><tr><td>State of Honduras</td><td>state</td></tr><tr><td>Grand Duchy of Berg</td><td>state</td></tr><tr><td>Chuvash Republic</td><td>state</td></tr></tbody></table>
 
-## Wrapping up
+## Wrapping Up
 
 So that was it, we've completed our task. It's only the tip of the iceberg though, Wikidata and SPARQL are powerful tools that can be used together to query data related to just about anything. I hope this post gets you interested in tinkering around with it yourself. To me, programming is still just as exhilarating as the day I wrote my first hello world back in 2017.
 
-## Going ahead
+## Going Ahead
 
 The query can still be improved in some ways, for example:
 
