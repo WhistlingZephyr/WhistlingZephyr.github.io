@@ -156,7 +156,7 @@ Notable mentions:
 
 ### 6. 100 Seconds of Code
 
-[100 Seconds of Code](https://www.youtube.com/watch?v=DC471a9qrU4&list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN) is a YouTube series by Fireship. It's an awesome series covering a vast amount of concepts within 100 seconds each.
+[100 Seconds of Code](https://www.youtube.com/playlist?list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN) is a YouTube series by Fireship. It's an awesome series covering a vast amount of concepts within 100 seconds each.
 
 ### 7. Navi
 
