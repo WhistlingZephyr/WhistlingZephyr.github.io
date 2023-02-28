@@ -108,6 +108,22 @@ And replace `8259` with any IETF RFC you wish to view. Likewise, with the CLI cl
 cht.sh rfc 8259
 ```
 
+You can also write the name of the RFC instead for searching through available RFCs. For example:
+
+```sh
+curl https://cht.sh/rfc/json
+```
+
+gives
+
+```txt
+4627 The application/json Media Type for JavaScript Object Notation (JSON). D. Crockford. 
+6901 JavaScript Object Notation (JSON) Pointer. P. Bryan, Ed., K. Zyp, M. Nottingham, Ed..
+...
+```
+
+And then you can make a new query with the RFC number.
+
 #### IV. Latency Numbers
 
 You can type the following to view a cheat sheet of latency numbers:
