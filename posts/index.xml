@@ -1,29 +1,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Zephyr's Hub</title><link>https://WhistlingZephyr.github.io/posts/</link><description>Recent content in Posts on Zephyr's Hub</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 28 Feb 2023 23:00:00 +0530</lastBuildDate><atom:link href="https://WhistlingZephyr.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Into the Rabbit Hole: Cheat Sheets for Programmers</title><link>https://WhistlingZephyr.github.io/posts/cheat-sheets-for-programmers/</link><pubDate>Tue, 28 Feb 2023 23:00:00 +0530</pubDate><guid>https://WhistlingZephyr.github.io/posts/cheat-sheets-for-programmers/</guid><description>Introduction In this post, we&amp;rsquo;ll explore various cheat sheets related to programming and places where you can find more of them.
-Digging Up 1. Cheat.sh Cheat.sh (or cht.sh if you prefer) claims to be &amp;ldquo;the only cheat sheet you need&amp;rdquo;. How does it work? The website should give us some hint, but let&amp;rsquo;s dive in ourselves.
-You usually use this one in a CLI. So, open a terminal emulator and type the following code:</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+Digging Up 1. Cheat.sh Cheat.sh (or cht.sh if you prefer) claims to be &amp;ldquo;the only cheat sheet you need&amp;rdquo;. It&amp;rsquo;s used in a CLI. How does it work? The website should give us some hint, but let&amp;rsquo;s dive in ourselves.
+So, open a terminal emulator and type the following code:</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>In this post, we&rsquo;ll explore various cheat sheets related to programming and places where you can find more of them.</p>
 <h2 id="digging-up">Digging Up</h2>
 <h3 id="1-cheatsh">1. Cheat.sh</h3>
-<p><a href="https://cheat.sh/">Cheat.sh</a> <small>(or <a href="https://cht.sh/">cht.sh</a></small> if you prefer) claims to be &ldquo;the only cheat sheet you need&rdquo;. How does it work? The website should give us some hint, but let&rsquo;s dive in ourselves.</p>
-<p>You usually use this one in a CLI. So, open a terminal emulator and type the following code:</p>
+<p><a href="https://cheat.sh/">Cheat.sh</a> <small>(or <a href="https://cht.sh/">cht.sh</a></small> if you prefer) claims to be &ldquo;the only cheat sheet you need&rdquo;. It&rsquo;s used in a CLI. How does it work? The website should give us some hint, but let&rsquo;s dive in ourselves.</p>
+<p><img src="/images/chtsh.png" alt="cheat.sh image"></p>
+<p>So, open a terminal emulator and type the following code:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/tar
 </code></pre></div><p>It fetches examples of the <code>tar</code> command from multiple sources. Let&rsquo;s try the following to narrow the results down further:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/tar~extract
-</code></pre></div><p>You can also get cheat sheets on language syntax using:</p>
+</code></pre></div><p>You can also get cheat sheets on a specific language</p>
+<p><img src="/images/chtsh-example.gif" alt="cheat.sh example"></p>
+<p>Try the following for example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/lambda
 </code></pre></div><p>For cases when the answer is from StackOverflow, add a <code>\?Q</code> suffix to hide comments <small>(or just <code>?Q</code> if you&rsquo;re using quotes around the URL)</small>; try and see the difference between these 2 commands:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/reverse+list
 </code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/reverse+list<span class="se">\?</span>Q
 </code></pre></div><p>Similarly, you can turn off ANSI coloring with <code>\?T</code>, and you can combine both like <code>\?QT</code>.</p>
+<p><img src="/images/chtsh-diagram.png" alt="cheat.sh output diagram"></p>
 <h4 id="installation">Installation</h4>
-<p>There&rsquo;s also a shell client that you can install from <a href="https://github.com/chubin/cheat.sh#installation">here</a> and add its tab-completion from <a href="https://github.com/chubin/cheat.sh#tab-completion">here</a>. This is how you&rsquo;ll perform those commands in the shell client:</p>
+<p>There&rsquo;s also a shell client that you can install by running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">PATH_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/bin&#34;</span>  <span class="c1"># or another directory on your $PATH</span>
+mkdir -p <span class="s2">&#34;</span><span class="nv">$PATH_DIR</span><span class="s2">&#34;</span>
+curl https://cht.sh/:cht.sh &gt; <span class="s2">&#34;</span><span class="nv">$PATH_DIR</span><span class="s2">/cht.sh&#34;</span>
+chmod +x <span class="s2">&#34;</span><span class="nv">$PATH_DIR</span><span class="s2">/cht.sh&#34;</span>
+</code></pre></div><p>Or to globally install it for all users, instead run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl -s https://cht.sh/:cht.sh <span class="p">|</span> sudo tee /usr/local/bin/cht.sh <span class="o">&amp;&amp;</span> sudo chmod +x /usr/local/bin/cht.sh
+</code></pre></div><p>And you can add its tab completion like for bash:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cheat.sh/:bash_completion &gt; ~/.bash.d/cht.sh
+. ~/.bash.d/cht.sh
+<span class="c1"># and add . ~/.bash.d/cht.sh to ~/.bashrc</span>
+</code></pre></div><p>And for zsh:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cheat.sh/:zsh &gt; ~/.zsh.d/_cht
+<span class="nb">echo</span> <span class="s1">&#39;fpath=(~/.zsh.d/ $fpath)&#39;</span> &gt;&gt; ~/.zshrc
+<span class="c1"># Open a new shell to load the plugin</span>
+</code></pre></div><p>This is how you&rsquo;ll perform those commands in the shell client:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh tar
 cht.sh tar~extract
 cht.sh python lambda
 cht.sh python reverse list
 cht.sh python reverse list <span class="se">\?</span>Q
-</code></pre></div><p>The client has other useful features like a handy shell where you can write your queries without having to prefix them with cht.sh each time. Visit <a href="https://github.com/chubin/cheat.sh#client-usage">here</a> for more on how to use it.</p>
-<p>This is just the tip of the iceberg, I recommend looking through <a href="https://cheat.sh/:intro">https://cheat.sh/:intro</a> and if you wish to use advanced parameters, <a href="https://cheat.sh/:help">https://cheat.sh/:help</a>. The intro page should tell you how to install it so that you can use it without having to type an URL each time.</p>
+</code></pre></div><p>The client has other useful features like a handy shell where you can write your queries without having to prefix them with cht.sh each time. Visit <a href="https://github.com/chubin/cheat.sh#client-usage">here</a> for more on how to use it. Here&rsquo;s a couple examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ cht.sh --shell
+cht.sh&gt; go reverse a list
+...
+cht.sh&gt; <span class="nb">cd</span> go
+cht.sh/go&gt; reverse a list
+...
+$ cht.sh --shell go
+cht.sh/go&gt; reverse a list
+...
+cht.sh/go&gt; join a list
+...
+<span class="c1"># You can make a single query for another language by prepending /</span>
+cht.sh/go&gt; /python dictionary comprehension
+...
+cht.sh/go&gt; <span class="nb">cd</span> ..
+cht.sh&gt; <span class="nb">help</span>
+...
+</code></pre></div><p>This is just the tip of the iceberg, I recommend looking through <a href="https://cheat.sh/:intro">https://cheat.sh/:intro</a> and if you wish to use advanced parameters, <a href="https://cheat.sh/:help">https://cheat.sh/:help</a>. The intro page should tell you how to install it so that you can use it without having to type an URL each time.</p>
 <p>Now, let&rsquo;s explore some other lesser known features of cheat.sh that the documentation doesn&rsquo;t mention.</p>
 <h4 id="i-chmod-calculator">I. <code>chmod</code> Calculator</h4>
 <p>Cheat.sh has a handy <code>chmod</code> calculator. Try the following for example which gives you a nice colored output describing the permissions:</p>
@@ -40,20 +76,80 @@ cht.sh python reverse list <span class="se">\?</span>Q
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/rfc/8259
 </code></pre></div><p>And replace <code>8259</code> with any IETF RFC you wish to view. Likewise, with the CLI client, you can type:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh rfc <span class="m">8259</span>
-</code></pre></div><h4 id="iv-latency-numbers">IV. Latency Numbers</h4>
+</code></pre></div><p>You can also write the name of the RFC instead for searching through available RFCs. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/rfc/json
+</code></pre></div><p>gives</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">4627 The application/json Media Type for JavaScript Object Notation (JSON). D. Crockford. 
+6901 JavaScript Object Notation (JSON) Pointer. P. Bryan, Ed., K. Zyp, M. Nottingham, Ed..
+...
+</code></pre></div><p>And then you can make a new query with the RFC number.</p>
+<h4 id="iv-latency-numbers">IV. Latency Numbers</h4>
 <p>You can type the following to view a cheat sheet of latency numbers:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/latencies
 </code></pre></div><p>Likewise, with the CLI client, you can type:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh latencies
 </code></pre></div><h4 id="v-oeis-integration">V. OEIS Integration</h4>
 <p>An <a href="https://oeis.org">OEIS</a> integration currently exists but is broken. I&rsquo;ve submitted an <a href="https://github.com/chubin/cheat.sh/issues/376">issue</a> (and thankfully the maintainers responded very quickly), and a <a href="https://github.com/chubin/cheat.sh/issues/187#issuecomment-1446306305">fix</a> should be along the way. I&rsquo;ll update this post after it&rsquo;s fixed and document its usage.</p>
-<h3 id="2-devhints">2. Devhints</h3>
+<h3 id="2-navi">2. Navi</h3>
+<p><a href="https://github.com/denisidoro/navi">Navi</a> is another popular command-line cheat sheet, except it&rsquo;s interactive.</p>
+<p><a href="https://asciinema.org/a/406461"><img src="https://asciinema.org/a/406461.svg" alt="navi ascii cast"></a></p>
+<p>Install it from your preferred <a href="https://github.com/denisidoro/navi#installation">repository</a> or <a href="https://github.com/denisidoro/navi/releases/">download the binary</a> for your OS. There are other ways to use it, which you can find in their <a href="https://github.com/denisidoro/navi#usage">README</a>. Let&rsquo;s explore them ourselves.</p>
+<h4 id="i-typing-navi-in-the-terminal">I. Typing <code>navi</code> In the Terminal</h4>
+<p>It&rsquo;s the most simple way to use navi, Try it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">navi
+</code></pre></div><p>The ASCII Cinema video above showcases how the output looks.</p>
+<h4 id="ii-as-a-shell-widget">II. As a Shell Widget</h4>
+<p>You can add the following to your shell&rsquo;s rc file to be able to use navi as a shell widget:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># bash</span>
+<span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>navi widget bash<span class="k">)</span><span class="s2">&#34;</span>
+
+<span class="c1"># zsh</span>
+<span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>navi widget zsh<span class="k">)</span><span class="s2">&#34;</span>
+
+<span class="c1"># fish</span>
+navi widget fish <span class="p">|</span> <span class="nb">source</span>
+
+<span class="c1"># elvish</span>
+<span class="nb">eval</span> <span class="o">(</span>navi widget elvish <span class="p">|</span> slurp<span class="o">)</span>
+</code></pre></div><p>After, you can access navi by pressing <code>Ctrl+G</code>. You can learn more about it <a href="https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget">here</a>. It&rsquo;s what was used to &ldquo;fix&rdquo; commands in the video above. Try it yourself by pressing <code>CTRL + G</code> after typing the following after you&rsquo;ve added the mentioned line to your shell rc file and reloaded it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">ls <span class="p">|</span> remove first line
+</code></pre></div><p>It should change to the follow:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">ls <span class="p">|</span> tail -n +2
+</code></pre></div><h4 id="iii-as-a-tmux-widget">III. As a Tmux Widget</h4>
+<p>You can add the following to your tmux config to use navi as a tmux widget:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">bind-key -T prefix C-g split-window <span class="se">\
+</span><span class="se"></span>  <span class="s2">&#34;</span><span class="nv">$SHELL</span><span class="s2"> --login -i -c &#39;navi --print | head -c -1 | tmux load-buffer -b tmp - ; tmux paste-buffer -p -t {last} -b tmp -d&#39;&#34;</span>
+</code></pre></div><p>The widget can be accessed by pressing <code>prefix + C-g</code>. It&rsquo;s useful when you want to use navi in any command-line apps or SSH sessions.</p>
+<h4 id="iv-others">IV. Others</h4>
+<p>You can also use navi as <a href="https://github.com/denisidoro/navi/blob/master/docs/aliases.md">aliases</a>, a <a href="https://github.com/denisidoro/navi/blob/master/docs/shell_scripting.md">shell scripting tool</a>, or an <a href="https://github.com/denisidoro/navi/blob/master/docs/shell_scripting.md">Alfred workflow</a>.</p>
+<h4 id="cheatsheet-repositories">Cheatsheet Repositories</h4>
+<p>Running <code>navi</code> for the first time will help you download and manage cheatsheets.</p>
+<p>You can also:</p>
+<ul>
+<li><a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_repositories.md#browsing-through-cheatsheet-repositories">browse through featured cheatsheets</a></li>
+<li><a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_repositories.md#importing-cheatsheets">import cheatsheets from git repositories</a></li>
+<li><a href="#cheatsheet-syntax">write your own cheatsheets</a> (and <a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_repositories.md#submitting-cheatsheets">share them</a>, if you want)</li>
+<li><a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_repositories.md#using-cheatsheets-from-other-tools">use cheatsheets from other tools</a>, such as <a href="https://github.com/tldr-pages/tldr">tldr</a> and <a href="https://github.com/chubin/cheat.sh">cheat.sh</a></li>
+<li><a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_repositories.md#auto-updating-repositories">auto-update repositories</a></li>
+<li>auto-export cheatsheets from your <a href="https://tiddlywiki.com/">TiddlyWiki</a> notes using a <a href="https://bimlas.gitlab.io/tw5-navi-cheatsheet/">TiddlyWiki plugin</a></li>
+</ul>
+<h4 id="cheatsheet-syntax">Cheatsheet Syntax</h4>
+<p>Cheatsheets are described in <code>.cheat</code> files that look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">% git, code
+<span class="c1"># Change branch</span>
+git checkout &lt;branch&gt;
+$ branch: git branch <span class="p">|</span> awk <span class="s1">&#39;{print $NF}&#39;</span>
+</code></pre></div><p>The full syntax and examples can be found <a href="https://github.com/denisidoro/navi/blob/master/docs/cheatsheet_syntax.md">here</a>.</p>
+<h4 id="more-info">More Info</h4>
+<p>Run the following to learn more about possible options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">navi --help
+</code></pre></div><h3 id="3-devhints">3. Devhints</h3>
 <p><a href="https://devhints.io/">Devhints</a> is a beautiful website containing many useful cheat sheets.</p>
 <p>Visit any page, for example <a href="https://devhints.io/regexp">https://devhints.io/regexp</a>, and you&rsquo;ll have a good amount of useful information right in front of you.</p>
-<h3 id="3-explainshellcom">3. explainshell.com</h3>
+<h3 id="4-explainshellcom">4. explainshell.com</h3>
 <p><a href="https://explainshell.com/#">explainshell.com</a> is not really a &ldquo;cheat sheet&rdquo; per se; this website allows you to get elegant explanations for various shell commands. Visit <a href="https://explainshell.com/explain?cmd=tar%20xzvf%20archive.tar.gz">https://explainshell.com/explain?cmd=tar%20xzvf%20archive.tar.gz</a> for an example.</p>
-<h3 id="4-awesome-cheatsheet">4. Awesome Cheatsheet</h3>
-<p><a href="https://github.com/detailyang/awesome-cheatsheet">Awesome Cheatsheet</a> is an <a href="https://github.com/sindresorhus/awesome">awesome</a> list of various cheat sheets from all over the web.</p>
+<h3 id="5-awesome-cheatsheet">5. Awesome Cheatsheet</h3>
+<p><a href="https://github.com/detailyang/awesome-cheatsheet">Awesome Cheatsheet</a> is an <a href="https://github.com/sindresorhus/awesome">awesome</a> lists of various cheat sheets from all over the web.</p>
 <p>Notable mentions:</p>
 <ul>
 <li><a href="https://bigocheatsheet.com/">https://bigocheatsheet.com/</a> - Big-O Cheat Sheet</li>
@@ -64,21 +160,16 @@ cht.sh python reverse list <span class="se">\?</span>Q
 <li><a href="https://perldoc.perl.org/perlcheat">https://perldoc.perl.org/perlcheat</a> - Perl 5 Cheat Sheet</li>
 <li><a href="https://docs.scala-lang.org/cheatsheets/">https://docs.scala-lang.org/cheatsheets/</a> - Scala Cheat Sheet</li>
 </ul>
-<h3 id="5-learn-x-in-y-minutes">5. Learn X in Y Minutes</h3>
+<h3 id="6-learn-x-in-y-minutes">6. Learn X in Y Minutes</h3>
 <p><a href="https://learnxinyminutes.com/">Learn X in Y Minutes</a> Is a website containing cheat sheet-like references of various programming languages among other things, something we&rsquo;ve already seen in Cheat.sh. Visit <a href="https://learnxinyminutes.com/docs/julia/">https://learnxinyminutes.com/docs/julia/</a> for an example.</p>
-<h3 id="6-100-seconds-of-code">6. 100 Seconds of Code</h3>
-<p><a href="https://www.youtube.com/watch?v=DC471a9qrU4&amp;list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN">100 Seconds of Code</a> is a YouTube series by Fireship. It&rsquo;s an awesome series covering a vast amount of concepts within 100 seconds each.</p>
-<h3 id="7-navi">7. Navi</h3>
-<p><a href="https://github.com/denisidoro/navi">Navi</a> is another popular command-line cheat sheet, except it&rsquo;s interactive.</p>
-<p>Install it from your preferred <a href="https://github.com/denisidoro/navi#installation">repository</a> or <a href="https://github.com/denisidoro/navi/releases/">download the binary</a> for your OS, then type</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">navi
-</code></pre></div><p>in a terminal emulator to get started. There are other ways to use it, which you can find in their <a href="https://github.com/denisidoro/navi#usage">README</a>.</p>
+<h3 id="7-100-seconds-of-code">7. 100 Seconds of Code</h3>
+<p><a href="https://www.youtube.com/playlist?list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN">100 Seconds of Code</a> is a YouTube series by Fireship. It&rsquo;s an awesome series covering a vast amount of concepts within 100 seconds each.</p>
 <h3 id="8-cheatography">8. Cheatography</h3>
 <p><a href="https://cheatography.com/">Cheatography</a> is another cheat sheet website, hosting thousands of programming cheat sheets. Visit <a href="https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/">https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/</a> for an example. You can also download the cheat sheets as PDFs.</p>
 <h2 id="wrapping-up">Wrapping Up</h2>
 <p>So that&rsquo;s it, we&rsquo;ve covered several useful cheat sheets for programmers. I hope this post was helpful, and maybe the next time you need to remember the syntax for a regex lookaround, you&rsquo;ll have an easier time.</p>
 <h2 id="going-ahead">Going Ahead</h2>
-<p>If you enjoy reading through list of things, you may want to check out the <a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome</a> repository or the <a href="https://github.com/topics/awesome-list">awesome-list</a> topic on GitHub. Cheat.sh&rsquo;s maintainer has <a href="https://github.com/chubin/awesome-console-services">awesome-console-services</a> that you might find fun to tinker with.</p>
+<p>If you enjoy reading through lists of things, you may want to check out the <a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome</a> repository or the <a href="https://github.com/topics/awesome-list">awesome-list</a> topic on GitHub. Cheat.sh&rsquo;s maintainer has <a href="https://github.com/chubin/awesome-console-services">awesome-console-services</a> that you might find fun to tinker with.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>Thanks to <a href="https://github.com/Dylan-DPC">@Dylan-DPC</a> and <a href="https://github.com/Monadic-Cat">@Monadic-Cat</a> for reviewing this post.</p>
 ]]></content></item><item><title>Into the Rabbit Hole: A Game of Data</title><link>https://WhistlingZephyr.github.io/posts/a-game-of-data/</link><pubDate>Wed, 01 Feb 2023 12:39:18 +0530</pubDate><guid>https://WhistlingZephyr.github.io/posts/a-game-of-data/</guid><description>Introduction In this post, we&amp;rsquo;ll find a way to list all countries, states, and capital cities starting and ending with the same letter, where the letter can&amp;rsquo;t be &amp;ldquo;a&amp;rdquo;, using Wikidata and SPARQL.
