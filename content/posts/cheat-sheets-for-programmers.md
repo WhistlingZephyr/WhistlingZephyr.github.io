@@ -154,7 +154,7 @@ Visit any page, for example <https://devhints.io/regexp>, and you'll have a good
 
 ### 4. Awesome Cheatsheet
 
-[Awesome Cheatsheet](https://github.com/detailyang/awesome-cheatsheet) is an [awesome](https://github.com/sindresorhus/awesome) list of various cheat sheets from all over the web.
+[Awesome Cheatsheet](https://github.com/detailyang/awesome-cheatsheet) is an [awesome](https://github.com/sindresorhus/awesome) lists of various cheat sheets from all over the web.
 
 Notable mentions:
 
@@ -196,7 +196,7 @@ So that's it, we've covered several useful cheat sheets for programmers. I hope 
 
 ## Going Ahead
 
-If you enjoy reading through list of things, you may want to check out the [sindresorhus/awesome](https://github.com/sindresorhus/awesome) repository or the [awesome-list](https://github.com/topics/awesome-list) topic on GitHub. Cheat.sh's maintainer has [awesome-console-services](https://github.com/chubin/awesome-console-services) that you might find fun to tinker with.
+If you enjoy reading through lists of things, you may want to check out the [sindresorhus/awesome](https://github.com/sindresorhus/awesome) repository or the [awesome-list](https://github.com/topics/awesome-list) topic on GitHub. Cheat.sh's maintainer has [awesome-console-services](https://github.com/chubin/awesome-console-services) that you might find fun to tinker with.
 
 ## Acknowledgements
 
