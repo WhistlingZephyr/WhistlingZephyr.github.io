@@ -36,7 +36,6 @@ You can also get cheat sheets on a specific language
 
 ![cheat.sh example](/images/chtsh-example.gif)
 
-
 Try the following for example:
 
 ```sh
