@@ -1,10 +1,93 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Zephyr's Hub</title><link>https://WhistlingZephyr.github.io/posts/</link><description>Recent content in Posts on Zephyr's Hub</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Feb 2023 12:39:18 +0530</lastBuildDate><atom:link href="https://WhistlingZephyr.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Into the Rabbit Hole: A Game of Data</title><link>https://WhistlingZephyr.github.io/posts/a-game-of-data/</link><pubDate>Wed, 01 Feb 2023 12:39:18 +0530</pubDate><guid>https://WhistlingZephyr.github.io/posts/a-game-of-data/</guid><description>Introduction In this post, we&amp;rsquo;ll find a way to list all countries, states, and capital cities starting and ending with the same letter, where the letter can&amp;rsquo;t be &amp;ldquo;a&amp;rdquo;, using Wikidata and SPARQL.
-Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord in the Rust Programming Language Community Server, and Dylan there gave me a fun challenge to solve: He said that he was trying to name all important places (such as countries, states, and major cities) that start and end with the same letter that isn&amp;rsquo;t &amp;ldquo;A&amp;rdquo; (because there are quite bunch that start and end with &amp;ldquo;A&amp;rdquo;).</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Zephyr's Hub</title><link>https://WhistlingZephyr.github.io/posts/</link><description>Recent content in Posts on Zephyr's Hub</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 28 Feb 2023 23:00:00 +0530</lastBuildDate><atom:link href="https://WhistlingZephyr.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Into the Rabbit Hole: Cheat Sheets for Programmers</title><link>https://WhistlingZephyr.github.io/posts/cheat-sheets-for-programmers/</link><pubDate>Tue, 28 Feb 2023 23:00:00 +0530</pubDate><guid>https://WhistlingZephyr.github.io/posts/cheat-sheets-for-programmers/</guid><description>Introduction In this post, we&amp;rsquo;ll explore various cheat sheets related to programming and places where you can find more of them.
+Digging Up 1. Cheat.sh Cheat.sh (or cht.sh if you prefer) claims to be &amp;ldquo;the only cheat sheet you need&amp;rdquo;. How does it work? The website should give us some hint, but let&amp;rsquo;s dive in ourselves.
+You usually use this one in a CLI. So, open a terminal emulator and type the following code:</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>In this post, we&rsquo;ll explore various cheat sheets related to programming and places where you can find more of them.</p>
+<h2 id="digging-up">Digging Up</h2>
+<h3 id="1-cheatsh">1. Cheat.sh</h3>
+<p><a href="https://cheat.sh/">Cheat.sh</a> <small>(or <a href="https://cht.sh/">cht.sh</a></small> if you prefer) claims to be &ldquo;the only cheat sheet you need&rdquo;. How does it work? The website should give us some hint, but let&rsquo;s dive in ourselves.</p>
+<p>You usually use this one in a CLI. So, open a terminal emulator and type the following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/tar
+</code></pre></div><p>It fetches examples of the <code>tar</code> command from multiple sources. Let&rsquo;s try the following to narrow the results down further:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/tar~extract
+</code></pre></div><p>You can also get cheat sheets on language syntax using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/lambda
+</code></pre></div><p>For cases when the answer is from StackOverflow, add a <code>\?Q</code> suffix to hide comments <small>(or just <code>?Q</code> if you&rsquo;re using quotes around the URL)</small>; try and see the difference between these 2 commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/reverse+list
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/reverse+list<span class="se">\?</span>Q
+</code></pre></div><p>Similarly, you can turn off ANSI coloring with <code>\?T</code>, and you can combine both like <code>\?QT</code>.</p>
+<h4 id="installation">Installation</h4>
+<p>There&rsquo;s also a shell client that you can install from <a href="https://github.com/chubin/cheat.sh#installation">here</a> and add its tab-completion from <a href="https://github.com/chubin/cheat.sh#tab-completion">here</a>. This is how you&rsquo;ll perform those commands in the shell client:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh tar
+cht.sh tar~extract
+cht.sh python lambda
+cht.sh python reverse list
+cht.sh python reverse list <span class="se">\?</span>Q
+</code></pre></div><p>The client has other useful features like a handy shell where you can write your queries without having to prefix them with cht.sh each time. Visit <a href="https://github.com/chubin/cheat.sh#client-usage">here</a> for more on how to use it.</p>
+<p>This is just the tip of the iceberg, I recommend looking through <a href="https://cheat.sh/:intro">https://cheat.sh/:intro</a> and if you wish to use advanced parameters, <a href="https://cheat.sh/:help">https://cheat.sh/:help</a>. The intro page should tell you how to install it so that you can use it without having to type an URL each time.</p>
+<p>Now, let&rsquo;s explore some other lesser known features of cheat.sh that the documentation doesn&rsquo;t mention.</p>
+<h4 id="i-chmod-calculator">I. <code>chmod</code> Calculator</h4>
+<p>Cheat.sh has a handy <code>chmod</code> calculator. Try the following for example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/chmod/755
+</code></pre></div><p>As you can see, it gives you a nice colored output describing the permissions. If you&rsquo;re using the CLI client, you can also type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh chmod <span class="m">755</span>
+</code></pre></div><h4 id="ii-learn-x-in-y-minutes-integration">II. Learn X in Y Minutes Integration</h4>
+<p>You can run the following to view the <a href="https://learnxinyminutes.com/">Learn X in Y Minutes</a> page of Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/python/:learn
+</code></pre></div><p>Replace <code>python</code> with any other language and have its Learn X in Y Minutes page instead. Likewise, with the CLI client, you can type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh python :learn
+</code></pre></div><h4 id="iii-ietf-rfc-viewer">III. IETF RFC Viewer</h4>
+<p>You can type the following to quickly view any IETF RFC in your terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/rfc/8259
+</code></pre></div><p>And replace <code>8259</code> with any IETF RFC you wish to view. Likewise, with the CLI client, you can type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh rfc <span class="m">8259</span>
+</code></pre></div><h4 id="iv-latency-numbers">IV. Latency Numbers</h4>
+<p>You can type the following to view a cheat sheet of latency numbers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/latencies
+</code></pre></div><p>Likewise, with the CLI client, you can type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh latencies
+</code></pre></div><h4 id="v-oeis-integration">V. OEIS Integration</h4>
+<p>An <a href="https://oeis.org">OEIS</a> integration currently exists but is broken. I&rsquo;ve submitted an <a href="https://github.com/chubin/cheat.sh/issues/376">issue</a> (and thankfully the maintainers responded very quickly), and a <a href="https://github.com/chubin/cheat.sh/issues/187#issuecomment-1446306305">fix</a> should be along the way. I&rsquo;ll update this post after it&rsquo;s fixed and document its usage.</p>
+<h3 id="2-devhints">2. Devhints</h3>
+<p><a href="https://devhints.io/">Devhints</a> is a beautiful website containing many useful cheat sheets.</p>
+<p>Visit any page, for example <a href="https://devhints.io/regexp">https://devhints.io/regexp</a>, and you&rsquo;ll have a good amount of useful information right in front of you.</p>
+<h3 id="3-explainshellcom">3. explainshell.com</h3>
+<p><a href="https://explainshell.com/#">explainshell.com</a> is not really a &ldquo;cheat sheet&rdquo; per se; this website allows you to get elegant explanations for various shell commands. Visit <a href="https://explainshell.com/explain?cmd=tar%20xzvf%20archive.tar.gz">https://explainshell.com/explain?cmd=tar%20xzvf%20archive.tar.gz</a> for an example.</p>
+<h3 id="4-awesome-cheatsheet">4. Awesome Cheatsheet</h3>
+<p><a href="https://github.com/detailyang/awesome-cheatsheet">Awesome Cheatsheet</a> is an <a href="https://github.com/sindresorhus/awesome">awesome</a> list of various cheat sheets from all over the web.</p>
+<p>Notable mentions:</p>
+<ul>
+<li><a href="https://bigocheatsheet.com/">https://bigocheatsheet.com/</a> - Big-O Cheat Sheet</li>
+<li><a href="https://easings.net/">https://easings.net/</a> - Easing Functions Cheat Sheet</li>
+<li><a href="https://cheats.rs/">https://cheats.rs/</a> - Rust Language Cheat Sheet</li>
+<li><a href="https://clojure.org/api/cheatsheet">https://clojure.org/api/cheatsheet</a> - Clojure Cheat Sheet</li>
+<li><a href="https://cljs.info/cheatsheet/">https://cljs.info/cheatsheet/</a> - ClojureScript Cheat Sheet</li>
+<li><a href="https://perldoc.perl.org/perlcheat">https://perldoc.perl.org/perlcheat</a> - Perl 5 Cheat Sheet</li>
+<li><a href="https://docs.scala-lang.org/cheatsheets/">https://docs.scala-lang.org/cheatsheets/</a> - Scala Cheat Sheet</li>
+</ul>
+<h3 id="5-learn-x-in-y-minutes">5. Learn X in Y Minutes</h3>
+<p><a href="https://learnxinyminutes.com/">Learn X in Y Minutes</a> Is a website containing cheat sheet-like references of various programming languages among other things, something we&rsquo;ve already seen in Cheat.sh. Visit <a href="https://learnxinyminutes.com/docs/julia/">https://learnxinyminutes.com/docs/julia/</a> for an example.</p>
+<h3 id="6-100-seconds-of-code">6. 100 Seconds of Code</h3>
+<p><a href="https://www.youtube.com/watch?v=DC471a9qrU4&amp;list=PL0vfts4VzfNiI1BsIK5u7LpPaIDKMJIDN">100 Seconds of Code</a> is a YouTube series by Fireship. It&rsquo;s an awesome series covering a vast amount of concepts within 100 seconds each.</p>
+<h3 id="7-navi">7. Navi</h3>
+<p><a href="https://github.com/denisidoro/navi">Navi</a> is another popular command-line cheat sheet, except it&rsquo;s interactive.</p>
+<p>Install it from your preferred <a href="https://github.com/denisidoro/navi#installation">repository</a> or <a href="https://github.com/denisidoro/navi/releases/">download the binary</a> for your OS, then type</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">navi
+</code></pre></div><p>in a terminal emulator to get started. There are other ways to use it, which you can find in their <a href="https://github.com/denisidoro/navi#usage">README</a>.</p>
+<h3 id="8-cheatography">8. Cheatography</h3>
+<p><a href="https://cheatography.com/">Cheatography</a> is another cheat sheet website, hosting thousands of programming cheat sheets. Visit <a href="https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/">https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/</a> for an example. You can also download the cheat sheets as PDFs.</p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>So that&rsquo;s it, we&rsquo;ve covered several useful cheat sheets for programmers. I hope this post was helpful, and maybe the next time you need to remember the syntax for a regex lookaround, you&rsquo;ll have an easier time.</p>
+<h2 id="going-ahead">Going Ahead</h2>
+<p>If you enjoy reading through list of things, you may want to check out the <a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome</a> repository or the <a href="https://github.com/topics/awesome-list">awesome-list</a> topic on GitHub. Cheat.sh&rsquo;s maintainer has <a href="https://github.com/chubin/awesome-console-services">awesome-console-services</a> that you might find fun to tinker with.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thanks to <a href="https://github.com/Dylan-DPC">@Dylan-DPC</a> and <a href="https://github.com/Monadic-Cat">@Monadic-Cat</a> for reviewing this post.</p>
+]]></content></item><item><title>Into the Rabbit Hole: A Game of Data</title><link>https://WhistlingZephyr.github.io/posts/a-game-of-data/</link><pubDate>Wed, 01 Feb 2023 12:39:18 +0530</pubDate><guid>https://WhistlingZephyr.github.io/posts/a-game-of-data/</guid><description>Introduction In this post, we&amp;rsquo;ll find a way to list all countries, states, and capital cities starting and ending with the same letter, where the letter can&amp;rsquo;t be &amp;ldquo;a&amp;rdquo;, using Wikidata and SPARQL.
+Background So one day (2022-Dec-14 to be specific) I was hanging out on Discord in the Rust Programming Language Community Server, and Dylan there gave me a fun challenge to solve: He said that he was trying to name all important places (such as countries, states, and major cities) that start and end with the same letter that isn&amp;rsquo;t &amp;ldquo;a&amp;rdquo; (because there are quite bunch that start and end with &amp;ldquo;a&amp;rdquo;).</description><content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>In this post, we&rsquo;ll find a way to list all countries, states, and capital cities
 starting and ending with the same letter, where the letter can&rsquo;t be &ldquo;a&rdquo;, using
 <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> and <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a>.</p>
 <h2 id="background">Background</h2>
-<p>So one day <small>(2022-Dec-14 to be specific)</small> I was hanging out on Discord in the <a href="https://discord.gg/rust-lang-community">Rust Programming Language Community Server</a>, and <a href="https://github.com/Dylan-DPC">Dylan</a> there gave me a fun challenge to solve: He said that he was trying to name all important places <small>(such as countries, states, and major cities)</small> that start and end with the same letter that isn&rsquo;t &ldquo;A&rdquo; <small>(because there are quite bunch that start and end with &ldquo;A&rdquo;)</small>. Well, I raised the concern that differentiating between major and non-major cities is likely going to be difficult, so I ended up ended up considering only capital cities in its place. I determined that I needed a way to get a list of all the world&rsquo;s countries, states, and capital cities first; and right off the bat, Wikidata seemed like the best place to start. That day, I learnt a bit of SPARQL and jotted down a basic <a href="https://w.wiki/678J">query</a> to find the solution. Although, that solution wasn&rsquo;t perfect; so let&rsquo;s try coming up with something better this time.</p>
+<p>So one day <small>(2022-Dec-14 to be specific)</small> I was hanging out on Discord in the <a href="https://discord.gg/rust-lang-community">Rust Programming Language Community Server</a>, and <a href="https://github.com/Dylan-DPC">Dylan</a> there gave me a fun challenge to solve: He said that he was trying to name all important places <small>(such as countries, states, and major cities)</small> that start and end with the same letter that isn&rsquo;t &ldquo;a&rdquo; <small>(because there are quite bunch that start and end with &ldquo;a&rdquo;)</small>. Well, I raised the concern that differentiating between major and non-major cities is likely going to be difficult, so I ended up ended up considering only capital cities in its place. I determined that I needed a way to get a list of all the world&rsquo;s countries, states, and capital cities first; and right off the bat, Wikidata seemed like the best place to start. That day, I learnt a bit of SPARQL and jotted down a basic <a href="https://w.wiki/678J">query</a> to find the solution. Although, that solution wasn&rsquo;t perfect; so let&rsquo;s try coming up with something better this time.</p>
 <blockquote>
 <p>Note: I&rsquo;m aware there are alternative ways to approach this problem; however, I&rsquo;ll be using Wikidata&rsquo;s Query Service with SPARQL to solve this rather than approaching it in a different way, for example using the graphical query builder to get a list of places and then filtering through in with a different language.</p>
 </blockquote>
