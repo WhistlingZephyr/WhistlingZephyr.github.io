@@ -26,9 +26,9 @@ cht.sh python reverse list <span class="se">\?</span>Q
 <p>This is just the tip of the iceberg, I recommend looking through <a href="https://cheat.sh/:intro">https://cheat.sh/:intro</a> and if you wish to use advanced parameters, <a href="https://cheat.sh/:help">https://cheat.sh/:help</a>. The intro page should tell you how to install it so that you can use it without having to type an URL each time.</p>
 <p>Now, let&rsquo;s explore some other lesser known features of cheat.sh that the documentation doesn&rsquo;t mention.</p>
 <h4 id="i-chmod-calculator">I. <code>chmod</code> Calculator</h4>
-<p>Cheat.sh has a handy <code>chmod</code> calculator. Try the following for example:</p>
+<p>Cheat.sh has a handy <code>chmod</code> calculator. Try the following for example which gives you a nice colored output describing the permissions:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">curl https://cht.sh/chmod/755
-</code></pre></div><p>As you can see, it gives you a nice colored output describing the permissions. If you&rsquo;re using the CLI client, you can also type:</p>
+</code></pre></div><p>If you&rsquo;re using the CLI client, you can also type:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">cht.sh chmod <span class="m">755</span>
 </code></pre></div><h4 id="ii-learn-x-in-y-minutes-integration">II. Learn X in Y Minutes Integration</h4>
 <p>You can run the following to view the <a href="https://learnxinyminutes.com/">Learn X in Y Minutes</a> page of Python:</p>
