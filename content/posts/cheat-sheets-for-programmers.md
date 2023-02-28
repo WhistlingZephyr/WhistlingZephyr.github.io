@@ -344,4 +344,4 @@ If you enjoy reading through lists of things, you may want to check out the [sin
 
 ## Acknowledgements
 
-Thanks to [@Dylan-DPC](https://github.com/Dylan-DPC) and [@Monadic-Cat](https://github.com/Monadic-Cat) for reviewing this post.
+Thanks to [@Dylan-DPC](https://github.com/Dylan-DPC), [@Monadic-Cat](https://github.com/Monadic-Cat), and [@Evrey](https://github.com/Evrey/) for reviewing this post.
