@@ -68,13 +68,13 @@ Now, let's explore some other lesser known features of cheat.sh that the documen
 
 #### I. `chmod` Calculator
 
-Cheat.sh has a handy `chmod` calculator. Try the following for example:
+Cheat.sh has a handy `chmod` calculator. Try the following for example which gives you a nice colored output describing the permissions:
 
 ```sh
 curl https://cht.sh/chmod/755
 ```
 
-As you can see, it gives you a nice colored output describing the permissions. If you're using the CLI client, you can also type:
+If you're using the CLI client, you can also type:
 
 ```sh
 cht.sh chmod 755
