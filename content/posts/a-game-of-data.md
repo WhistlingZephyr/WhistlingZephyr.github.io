@@ -161,7 +161,7 @@ SELECT ?label ?type WHERE {
 }
 ```
 
-The [results](https://w.wiki/6HLK) match our requirements. However, there are entires missing, "Ohio" for example. We search it up and see that [Q1397](https://www.wikidata.org/wiki/Q1397) Ohio is an instance of [Q35657](https://www.wikidata.org/wiki/Q35657) U.S. state which is a subclass of [Q106458883](https://www.wikidata.org/wiki/Q106458883) state. We on the other hand, used [Q7275](https://www.wikidata.org/wiki/Q7275) state which appears to be different. Looking into a category that includes all our desired places such as states and provinces, we find that [Q107390](https://www.wikidata.org/wiki/Q107390) federated state is what we're looking for; it also states that it's equivalent to <https://schema.org/State>.
+The [results](https://w.wiki/6HLK) match our requirements. However, there are entries missing, "Ohio" for example. We search it up and see that [Q1397](https://www.wikidata.org/wiki/Q1397) Ohio is an instance of [Q35657](https://www.wikidata.org/wiki/Q35657) U.S. state which is a subclass of [Q106458883](https://www.wikidata.org/wiki/Q106458883) state. We on the other hand, used [Q7275](https://www.wikidata.org/wiki/Q7275) state which appears to be different. Looking into a category that includes all our desired places such as states and provinces, we find that [Q107390](https://www.wikidata.org/wiki/Q107390) federated state is what we're looking for; it also states that it's equivalent to <https://schema.org/State>.
 
 ```SPARQL
 SELECT ?label ?type WHERE {
@@ -185,7 +185,7 @@ SELECT ?label ?type WHERE {
 }
 ```
 
-The [result](https://w.wiki/6HLL) still doesn't have "Ohio", because [Q1397](https://www.wikidata.org/wiki/Q1397) Ohio isn't directly an instance of [Q107390](https://www.wikidata.org/wiki/Q107390) federated state but rather an instance of [Q35657](https://www.wikidata.org/wiki/Q35657) U.S. state which is a subclass of federated state. To solve it, we use `wdt:P31/wdt:P279*` as the property which says that there’s one “instance of” and then any number of “subclass of” statements between the item and the class. Also, we can `SELECT DISTINCT` instead of just `SELECT` here to avoid duplicate entires.
+The [result](https://w.wiki/6HLL) still doesn't have "Ohio", because [Q1397](https://www.wikidata.org/wiki/Q1397) Ohio isn't directly an instance of [Q107390](https://www.wikidata.org/wiki/Q107390) federated state but rather an instance of [Q35657](https://www.wikidata.org/wiki/Q35657) U.S. state which is a subclass of federated state. To solve it, we use `wdt:P31/wdt:P279*` as the property which says that there’s one “instance of” and then any number of “subclass of” statements between the item and the class. Also, we can `SELECT DISTINCT` instead of just `SELECT` here to avoid duplicate entries.
 
 ```SPARQL
 SELECT DISTINCT ?label ?type WHERE {
